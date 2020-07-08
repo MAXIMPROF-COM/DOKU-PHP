@@ -12,7 +12,8 @@
   "license": "MIT",
   "keywords": [
     "api",
-    "doku"
+    "doku",
+    "doku api v2"
   ],
   "require": {
     "php": ">=5.5.0",
