@@ -1,0 +1,31 @@
+{
+  "name": "maximprof/doku-php",
+  "type": "library",
+  "description": "DOKU payment gateway API wrapper. Fork of https://github.com/otezz/doku-php/ with support for HTTPS in staging",
+  "authors": [
+    {
+      "name": "Sreekuttan M Achari",
+      "email": "sreekuttan.m.achari@gmail.com"
+    }
+  ],
+  "homepage": "https://github.com/MAXIMPROF-COM/DOKU-PHP.git",
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "doku"
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "ext-curl": "*",
+    "ext-json": "*", 
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.0|^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Maximprof\\Doku\\": "src/"
+    }
+  }
+}
