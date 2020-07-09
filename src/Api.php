@@ -57,9 +57,7 @@ class Api {
 	 */
 	private static function getResponse($url, $data) {
 		$client = new Client();
-		$options = [
-			'form_params' => ['data' => json_encode($data)],
-		];
+		$options['form_params'] = ['data' => json_encode($data)];
 		if ($proxy != '') {
 			$options['proxy'] = $proxy;
 		}
