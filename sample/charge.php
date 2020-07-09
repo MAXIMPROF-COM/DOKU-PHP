@@ -59,7 +59,12 @@ $dataPayment = array(
 
 );
 
-$responsePayment = Api::doPayment($dataPayment);
+$dokuChargeResponse = Api::payment($dataPayment);
+$paymentDetails = $dokuChargeResponse->getBody()->getContents();
+
+/*print_r($responsePayment); exit; */
+
+$responsePayment = json_decode($paymentDetails);
 
 if ($responsePayment->res_response_code == '0000') {
 
