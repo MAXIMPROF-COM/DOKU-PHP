@@ -10,6 +10,7 @@ Doku::$mallId = "mallId";
 $currency = '360';
 $invoice = 'invoice' . rand(1, 100);
 $amount = '10000.00';
+$merchant_code = Doku::$mallId;
 
 $params = array(
 	'amount' => $amount,
