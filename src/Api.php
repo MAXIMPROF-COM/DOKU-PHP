@@ -11,6 +11,9 @@ use GuzzleHttp\Client;
  * @package Maximprof\Doku
  */
 class Api {
+
+	public static $proxy = '';
+
 	/**
 	 * @param $data
 	 * @return \Psr\Http\Message\ResponseInterface
@@ -54,10 +57,13 @@ class Api {
 	 */
 	private static function getResponse($url, $data) {
 		$client = new Client();
-		$response = $client->post($url, [
+		$options = [
 			'form_params' => ['data' => json_encode($data)],
-		]);
-
+		];
+		if ($proxy != '') {
+			$options['proxy'] = $proxy;
+		}
+		$response = $client->post($url, $options);
 		return $response;
 	}
 }
